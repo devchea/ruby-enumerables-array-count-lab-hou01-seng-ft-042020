@@ -2,9 +2,7 @@ require 'pry'
 
 def count_strings(array)
   # Return the total number of strings in the provided array using the count enumerable
-array.count do |num|
-  num == num.to_s
-  end
+array.count {|element| element == element.to_s}
 end
 
 def count_empty_strings(array)
